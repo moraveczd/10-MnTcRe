@@ -1,0 +1,1094 @@
+\documentclass[hyperref=unicode, presentation,10pt]{beamer}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{mhchem}
+\usepackage{chemfig}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+
+%dělení slov
+\usepackage{ragged2e}
+\let\raggedright=\RaggedRight
+%konec dělení slov
+
+\addtobeamertemplate{frametitle}{
+	\let\insertframetitle\insertsectionhead}{}
+\addtobeamertemplate{frametitle}{
+	\let\insertframesubtitle\insertsubsectionhead}{}
+
+\makeatletter
+\CheckCommand*\beamer@checkframetitle{\@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\renewcommand*\beamer@checkframetitle{\global\let\beamer@frametitle\relax\@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\makeatother
+\setbeamercolor{section in toc}{fg=red}
+\setbeamertemplate{section in toc shaded}[default][100]
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+
+\def\uv#1{„#1“}
+
+\mode<presentation>{\usetheme{default}}
+ \usecolortheme{crane}
+
+\setbeamertemplate{footline}[frame number]
+
+\title[Crisis]
+{C2062 -- Anorganická chemie II}
+
+\subtitle{Mangan, technecium, rhenium a bohrium}
+\author{Zdeněk Moravec, hugo@chemi.muni.cz \\ \adjincludegraphics[height=60mm]{img/IUPAC_PSP.jpg}}
+\date{}
+
+\begin{document}
+
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\section{Úvod}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{tabular}{|c|l|l|l|}
+	\hline
+	 & \textit{Mangan} & \textit{Technecium} & \textit{Rhenium} \\\hline
+	 El. konfigurace & 3d$^{5}$ 4s$^{2}$ & 4d$^{5}$ 5s$^{2}$ & 4f$^{14}$ 5d$^{5}$ 6s$^{2}$ \\\hline
+	 Teplota tání [$^\circ$C] & 1246 & 2157 & 3186 \\\hline
+	 Teplota varu [$^\circ$C]  & 2061 & 4265 & 5630 \\\hline
+	 Objeven & 1774 & 1937 & 1908 \\\hline
+	 Vzhled & stříbrný & šedý & stříbrošedé \\
+	 &  \begin{minipage}{.2\textwidth}
+	 	\adjincludegraphics[width=\linewidth]{img/Mangan.jpg}
+	 \end{minipage}
+	 	& \begin{minipage}{.2\textwidth}
+	 		\adjincludegraphics[width=\linewidth]{img/Technetium-sample.jpg}
+	 	\end{minipage} & \begin{minipage}{.2\textwidth}
+	 	\adjincludegraphics[width=\linewidth]{img/Rhenium.jpg}
+ 	\end{minipage} \\\hline
+	\end{tabular}
+
+	\begin{itemize}
+		\item \textit{Bohrium}
+		\begin{itemize}
+			\item Patnáctý transuran, protonové číslo 107, Bh.
+			\item Poprvé byl připraven v roce 1976:
+			\item \ce{^{209}_{83}Bi + ^{54}_{24}Cr -> ^{261}_{107}Bh$^\star$ -> ^{1}_{0}n}
+			\item Pojmenován podle dánského fyzika Nielse Bohra.\footnote[frame]{\href{http://publications.iupac.org/pac/pdf/1997/pdf/6912x2471.pdf}{Names and symbols of transfermium elements}}
+		\end{itemize}
+	\end{itemize}
+	\vfill
+}
+
+\section{Chemické a fyzikální vlastnosti}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Mangan a rhenium jsou stabilní prvky, technecium je nejlehčí prvek, který nemá stabilní izotop.
+		\item Manganu se ročně spotřebují milióny tun, naproti tomu technecium i~rhenium jsou vzácné prvky.
+		\item Jejich elektronová konfigurace je (n-1)d$^5$ ns$^2$.
+		\item Mají vysoké teploty tání.
+		\item Mangan vytváří čtyři allotropy, za laboratorní teploty je stabilní $\alpha$ modifikace krystalující v kubické prostorově centrované buňce.
+		\item Technecium a rhenium krystalují v nejtěsnějším hexagonálním uspořádání.
+		\item Mangan je tvrdý a křehký.
+		\item Rhenium je těžko tavitelné, má druhou nejvyšší teplotu tání mezi přechodnými kovy.
+		\item Nejstabilnější oxidační číslo manganu je II, nejvyšší hodnota oxidačního čísla je VII, tyto sloučeniny mají silnější oxidační vlastnosti než sloučeniny \ce{Cr^{VI}}.
+	\end{itemize}
+	\vfill
+}
+
+\section{Výskyt a získávání prvků}
+\subsection{Mangan}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Koncentrace manganu v zemské kůře je asi 0,1~\%, jde o 12. nejzastoupenější prvek.
+		\item Nejdůležitějším minerálem je pyrolusit, \ce{MnO2}.
+		\item Další významné minerály jsou braunit, psilomelan a rhodochrosit.
+		\item Známe téměř 500 minerálů obsahujících mangan.\footnote[frame]{\href{https://www.mindat.org/element/Manganese}{The mineralogy of Manganese}}
+		\item Mangan je také přítomen ve sfaleritech (\ce{(Zn,Fe)S}) s vysokým obsahem železa.\footnote[frame]{\href{https://www.mindat.org/min-3727.html}{Sphalerite}}
+		\item Mangan se těží převážně v Jižní Africe, Číně, Austrálii, Brazílii a~Indii.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=0.3\textwidth]{img/World_Manganese_Production_2006.png}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Pyroluzit}
+	\begin{itemize}
+		\item Tetragonální minerál, \ce{MnO2}, černá až šedá barva.\footnote[frame]{\href{https://mineraly.sci.muni.cz/oxidy/pyroluzit.html}{Pyroluzit}}
+		\item Má strukturu rutilu.\footnote[frame]{\href{https://www.mindat.org/min-3318.html}{Pyrolusite}}
+		\item Hlavní ruda manganu.
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Pyrolusite_botryoidal.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Piroluzyt_Wlochy.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Braunit}
+	\begin{itemize}
+		\item Tetragonální minerál, \ce{Mn^{2+}Mn^{3+}6[O8|SiO4]}, hnědá až šedá barva.\footnote[frame]{\href{https://www.mindat.org/min-757.html}{Braunit}}
+		\item Nesosilikát.
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Braunite-229837.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Braunite_Manganese_oxide_and_silicate.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Psilomelan}
+	\begin{itemize}
+		\item Monoklinické minerály, \ce{Ba(Mn^{2+})(Mn^{4+})8O16(OH)4} nebo\\ \ce{(Ba,H2O)2Mn5O10}, černá až šedá barva.\footnote[frame]{\href{https://mineraly.sci.muni.cz/oxidy/psilomelan.html}{Psilomelan}}
+		\item Skupina oxidických minerálů.\footnote[frame]{\href{https://www.mindat.org/min-3304.html}{Psilomelane}}
+		\item Složení je proměnlivé.
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Psilomelane-167850.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Vanadinite-Psilomelane-112809.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Rodochrozit}
+	\begin{itemize}
+		\item Trigonální minerál, \ce{MnCO3}, růžová, červená až žlutá barva.\footnote[frame]{\href{https://mineraly.sci.muni.cz/karbonaty/rodochrozit.html}{Rodochrozit}}
+		\item Biominerál, může být produkován houbami během oxidačních procesů.\footnote[frame]{\href{https://www.mindat.org/min-3406.html}{Rhodochrosite}}
+		\item Využívá se k výrobě manganových slitin.
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Rhodochrosite_Crystal.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Rhodochrosite_Pink_Form.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Část manganových rud se zpracovává na \textit{ferromangan}.
+		\item Manganová ruda se redukuje s železnou rudou a koksem ve vysokých nebo elektrických pecích.\footnote[frame]{\href{http://www.forexmetalminerals.com/Product.aspx?id=4}{Ferromanganese}}
+		\item Často se redukce provádí v přítomnosti vápence, který váže křemík a vytváří strusku.
+		\item Obsahuje 75~\% manganu a 7~\% uhlíku.
+		\item Světová produkce se pohybuje v miliónech tun.
+	\end{itemize}
+	\begin{figure}
+	\adjincludegraphics[height=0.3\textwidth]{img/Ferromanganese.jpg}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Surový mangan se získává redukcí železem.
+		\item Ruda se redukuje zemním plynem, který vystupuje jako zdroj tepla i~redukčního činidla (CO).
+		\item Redukcí získáme burel, \ce{MnO2}. Mletím je snížen průměr částic na 150--250~$\mu$m, tím dojde ke zvýšení měrného povrchu a usnadnění extrakce.
+		\item Extrakce se provádí kyselinou sírovou s rozpuštěnou železnatou solí.
+		\item Železnatá sůl redukuje manganičité ionty na kovový mangan.
+		\item Takto se získá více než 90~\% manganu.
+		\item Další čištění je možné provést elektrolyticky.\footnote[frame]{\href{https://doi.org/10.1016/j.hydromet.2016.01.010}{Electrolytic manganese metal production from manganese carbonate precipitate}}
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Standardní elektrodový potenciál \ce{Mn^{2+}/Mn} je $-$1,18~V.
+		\item Ruda se zpracuje na oxid manganatý.\footnote[frame]{\href{https://www.saimm.co.za/Journal/v077n07p137.pdf}{The production of electrolytic manganese in South Africa}}
+		\item Oxid manganatý se rozpustí v kyselině sírové:
+		\item \ce{MnO + H2SO4 -> MnSO4 + H2O}
+		\item Nečistoty jsou z roztoku odstraněny srážením sulfidem amonným.
+		\item Čistý roztok je poté elektrolyzován:
+		\item Katoda: \ce{MnSO4 + 2 e- -> Mn + SO$_4^{2-}$}
+		\item Anoda: \ce{H2O -> 2 H+ + 1/2 O2 + 2 e-}
+		\item Celková reakce: \ce{MnSO4 + H2O -> Mn + H2SO4 + 1/2 O2}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Technecium}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Technecium se v přírodě vyskytuje pouze ve stopových množstvích.
+		\item V přírodě se vyskytuje izotop \ce{^{99}Tc} s poločasem rozpadu 2,12.10$^5$ roků.
+		\item Uměle se připravuje štěpením \ce{^{238}U} pomalými neutrony.
+		\item \ce{$^{238}_{\ 92}$U -> $^{137}_{\ 53}$I + $^{99}_{39}$Y + 2 ^1_0n}
+		\item \ce{$^{99}_{39}$Y ->[$\beta$^-][1.47 s] $^{99}_{40}$Zr ->[$\beta$^-][2.1 s] $^{99}_{41}$Nb ->[$\beta$^-][15.0 s] $^{99}_{42}$Mo ->[$\beta$^-][65.94 h] $^{99}_{43}$Tc}
+		\item Tvoří až 6~\% jaderného odpadu.
+		\item Z něj se získává až po několika letech, aby došlo k rozpadu jader s kratším poločasem rozpadu a tím snížení aktivity odpadu.
+		\item Roztok po izolaci plutonia a uranu v procesu PUREX obsahuje podíl technecistanu, \ce{^{99}TcO$_4^-$}.
+		\item Ten lze extrahovat pyridem a poté vykrystalovat jako technecistan amonný, \ce{NH4 ^{99}TcO4}.
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Nejpoužívanější je jaderný izomer \ce{^{99m}Tc}, který se získává z generátoru \ce{^{99}Mo/^{99m}Tc}.
+		\item Mateřský izotop \ce{^{99}Mo} je ve formě \ce{MoO$^{2-}_4$} immobilizován v horní části anexové kolony naplněné aluminou.
+		\item Vznikající \ce{^{99m}TcO$^{-}_4$} je eluován roztokem NaCl.
+		\item Izomer přechází do základního stavu emisí fotonu o energii 140~keV, poločas 6,0 hodin.
+		\item V malé míře dochází také k rozpadu $\beta^-$:
+		\item \ce{^{99m}Tc -> ^{99}Ru + $\beta$^-}
+	\end{itemize}
+
+	\begin{figure}
+		\adjincludegraphics[height=0.25\textwidth]{img/Five99mTechnetiumGenerators.jpg}
+		\caption*{Generátory \ce{^{99}Mo/^{99m}Tc}.\footnote[frame]{\href{https://commons.wikimedia.org/wiki/File:Five99mTechnetiumGenerators.jpg}{Zdroj: Kieran Maher/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Rhenium}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Rhenium je jedním z nejvzácnějších prvků, jeho koncentrace v zemské kůře je okolo 1 ppb.
+		\item Vyskytuje se ve dvou minerálech: \textit{rheniitu} (\ce{ReS2}) a \textit{tarkianitu}\\ (\ce{(Cu,Fe)(Re,Mo)4S8}).\footnote[frame]{\href{https://www.mindat.org/element/Rhenium}{The mineralogy of Rhenium}}
+		\item Komerčním zdrojem rhenia je molybdenit, který obsahuje asi 0,2~\% rhenia.
+		\item Největší zdroje rhenia se nacházejí v Chile.
+	\end{itemize}
+	\begin{figure}
+	\adjincludegraphics[height=0.35\textwidth]{img/Rhenium.jpg}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Molybdenit}
+	\begin{itemize}
+		\item Hexagonální minerál, \ce{MoS2}, modravě šedá barva.\footnote[frame]{\href{https://mineraly.sci.muni.cz/sulfidy/molybdenit.html}{Molybdenit}}
+		\item Využívá se v ocelářském a chemickém průmyslu.
+		\item Dříve se krystaly molybdenitu (nebo \ce{FeS2}, \ce{PbCO3}) využívaly ke konstrukci hrotových diod (cat's whisker detectors) určených k demodulaci rádiového signálu.
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Molybdenite.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Molybdenite_quebec2.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Rheniit}
+	\begin{itemize}
+		\item Trojklonný minerál, \ce{ReS2}, černá až stříbrno-bílá barva.\footnote[frame]{\href{https://www.mindat.org/min-7269.html}{Rheniite}}
+		\item Velmi vzácný, poprvé byl nalezen v roce 1994 v Rusku.\footnote[frame]{\href{https://doi.org/10.1038/369051a0}{Discovery of a pure rhenium mineral at Kudriavy volcano}}
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Rheniite-183985.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.4\textheight]{img/Rheniite-34295.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Rhenium se vyrábí z polétavých prachů vznikajících pražením molybdenitu.
+		\item Kov je oxidován na \ce{Re2O7} a oxid je poté srážen chloridem amonným:
+		\item \ce{Re2O7 + 2 NH4Cl + H2O -> 2 NH4ReO4 + 2 HCl}
+		\item Kovové rhenium se připravuje redukcí rhenistanu amonného vodíkem:\footnote[frame]{\href{https://doi.org/10.1080/03719553.2017.1375707}{Investigation on ammonium perrhenate behaviour in nitrogen, argon and hydrogen atmosphere as a part of rhenium extraction process}}
+		\item \ce{2 NH4ReO4 + 7 H2 ->[300 $^\circ$C] 2 Re + 8 H2O + 2 NH3}
+		\item Celosvětová roční produkce rhenia se pohybuje okolo 50 tun.\footnote[frame]{\href{https://www.usgs.gov/centers/nmic/rhenium-statistics-and-information}{Rhenium Statistics and Information}}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Bohrium}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{columns}
+		\begin{column}{.6\textwidth}
+			\begin{itemize}
+				\item Bylo pojmenován po dánském fyzikovi Nielsu Bohrovi, který získal Nobelovu cenu za fyziku za výzkum struktury atomu a radioaktivního záření.\footnote[frame]{\href{https://www.nobelprize.org/prizes/physics/1922/summary/}{The Nobel Prize in Physics 1922}}
+				\item Název byl schválen roku 1997.\footnote[frame]{\href{https://doi.org/10.1351/pac199769122471}{Names and symbols of transfermium elements (IUPAC Recommendations 1997)}}
+				\item Známe 11 radioizotopů a jeden jaderný izomer. Nejstabilnějším izotopem je \ce{^{274}Bh} s poločasem rozpadu 0,9~minut, příp. nepotvrzený izotop \ce{^{275}Bh} s poločasem rozpadu 11,5~minut.
+				\item Tento izotop je součástí rozpadové řady flerovia.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/Niels_Bohr.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Terč} & \textbf{Projektil} & \textbf{Připravený izotop} \\\hline
+		\ce{^{208}Pb} & \ce{^{55}Mn} & \ce{^{263}Bh} \\\hline
+		\ce{^{209}Bi} & \ce{^{54}Cr} & \ce{^{263}Bh} \\\hline
+		\ce{^{209}Bi} & \ce{^{52}Cr} & \ce{^{261}Bh} \\\hline
+		\ce{^{238}U} & \ce{^{31}P} & \ce{^{269}Bh} \\\hline
+		\ce{^{243}Am} & \ce{^{26}Mg} & \ce{^{269}Bh} \\\hline
+		\ce{^{248}Cm} & \ce{^{23}Na} & \ce{^{271}Bh} \\\hline
+		\ce{^{249}Bk} & \ce{^{22}Na} & \ce{^{271}Bh} \\\hline
+	\end{tabular}
+
+	\begin{itemize}
+		\item V roce 2000 byla publikována příprava \ce{BhO3Cl}:\footnote[frame]{\href{https://www.superheavies.de/english/publications/pub_images/pub_annual_img/annual_reports_2000/SHE_AR_2000_eichler.pdf}{Gas chemical investigation of bohrium}}
+		\item \ce{2 Bh + 3 O2 + 2 HCl ->[1000 $^\circ$C] 2 BhO3Cl + H2}
+	\end{itemize}
+	\vfill
+}
+
+\section{Využití prvků}
+\subsection{Mangan}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Většina manganu se využívá ve slitinách, nejčastěji v ocelích, ale i~v~hliníkových slitinách.
+		\item V ocelářství se využívá \textit{ferromangan}, což je slitina manganu a železa s obsahem až 80~\% manganu. Vyrábí se redukcí směsi oxidu manganičitého a železitého koksem ve vysoké nebo elektrické peci.\footnote[frame]{\href{https://www.britannica.com/technology/manganese-processing}{Manganese processing}}
+		\item Mangan je při výrobě ocelí nenahraditelný, slouží k fixaci síry.
+		\item Zabraňuje vzniku sulfidů železa na hranicích zrn.
+		\item Váže rozpuštěný kyslík, síru a fosfor.
+		\item Malá množství manganu zvyšují opracovatelnost ocelí za vyšší teploty, vytváří totiž sulfidy, které mají vysokou teplotu tání.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=.3\textheight]{img/Ferromanganese_metal.jpg}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Ve slitinách s hliníkem se používá jen malý podíl manganu, do 1,5~\%. Tyto slitiny mají vyšší pevnost a lepší odolnost vůči korozi než čistý hliník.
+	\end{itemize}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Slitina} & \textbf{Obsah Al [\%]} & \textbf{Obsah legur} \\\hline
+		3003 & 98,4 & Mn 1,5; Cu 0,12 \\\hline
+		3004 & 97,8 & Mn 1,2; Mg 1 \\\hline
+		3005 & 98,5 & Mn 1,0; Mg 0,5 \\\hline
+		3102 & 99,8 & Mn 0,2 \\\hline
+		3103 & 98,8 & Mn 1,2 \\\hline
+		3105 & 97,8 & Mn 0,55; Mg 0,5 \\\hline
+		3203 & 98,8 & Mn 1,2 \\\hline
+		3303 & 98,8 & Mn 1,2 \\\hline
+		4015 & 96,8 & Si 2,0; Mn 1,0; Mg 0,2 \\\hline
+		5026 & 93,9 & Mg 4,5; Mn 1; Si 0,9; Fe 0,4; Cu 0,3 \\\hline
+	\end{tabular}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Trikarbonyl(methylcyklopentadienyl)mangan, MMT, se používá jako náhrada tetraethylolova.
+		\item Zvyšuje oktanové číslo benzínu.
+		\item Připravuje se redukcí bis(methylcyklopentadienyl)manganatého komplexu triethylhliníkem v atmosféře CO.
+		\item Reakce je silně exotermní, bez chlazení může vést k výbuchu.\footnote[frame]{\href{https://www.youtube.com/watch?v=C561PCq5E1g}{Runaway: Explosion at T2 Laboratories}}
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=0.35\textwidth]{img/Methylcyclopentadienyl-Manganese-Tricarbonyl_Skeletal.png}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item \textit{Oxid manganičitý}, \textit{burel}, \ce{MnO2}.
+		\item Využívá se jako pigment v keramice a sklářství, v suchých článcích a~organické syntéze.
+		\item V dnešní době jsou běžnější alkalické články, kde je anoda tvořena práškovým zinkem v hydroxidu draselném, starší zinko-uhlíkové články mají anodu tvořenou zinkovým pláštěm článku.
+		\item V suchých článcích vystupuje, ve směsi s mletým grafitem, jako katoda.
+		\item \ce{Zn + 2 Cl- -> ZnCl2 + 2 e-}
+		\item \ce{2 MnO2 + 2 NH4Cl + H2O + 2 e- -> Mn2O3 + 2 NH4OH + 2 Cl-}
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+		\begin{figure}
+		\adjincludegraphics[height=0.32\textheight]{img/Manganese-IV_oxide.jpg}
+		\end{figure}
+		\end{column}
+	\begin{column}{.5\textwidth}
+		\begin{figure}
+			\adjincludegraphics[height=0.32\textheight]{img/Zincbattery.png}
+		\end{figure}
+	\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item V organické syntéze se využívá \ce{MnO2} jako oxidační činidlo.
+		\item Oxiduje alkoholy na karbonyly:\footnote[frame]{\href{https://dx.doi.org/10.1002/047084289X.rm021.pub4}{Encyclopedia of Reagents for Organic Synthesis || Manganese Dioxide.}}
+		\item \ce{RCH=CHCH2OH + MnO2 -> RCH=CHCHO + MnO + H2O}
+	\end{itemize}
+
+	\begin{figure}
+		\adjincludegraphics[width=\textwidth]{img/MnO2-catal.png}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item \textit{Manganistan draselný}, \ce{KMnO4}.
+		\item Ročně se ho vyrobí asi 500 000 tun.
+		\item Je to velice účinné oxidační činidlo.
+		\item Využívá se i v lékařství jako dezinfekce.
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.7\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.45\textheight]{img/KMnO4_and_glycerol.jpg}
+				\caption*{Reakce manganistanu s glycerolem}
+			\end{figure}
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.45\textheight]{img/KMN04-4.jpg}
+				\caption*{Rozpouštění \ce{KMnO4} ve vodě}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Hlavní využití nachází manganistan v organické syntéze.\footnote[frame]{\href{https://dx.doi.org/10.1055/s-1987-27859}{The Classical Permanganate Ion: Still a Novel Oxidant in Organic Chemistry}}
+		\item Alkeny dokáže oxidovat na dieny.\footnote[frame]{\href{https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Oxidation_and_Reduction_Reactions/Oxidation_of_Organic_Molecules_by_KMnO4}{Oxidation of Organic Molecules by \ce{KMnO4}}}
+		\item Alkyny oxiduje na diony, terminální alkyny na karboxylové kyseliny.
+		\item Alkoholy oxiduje na karbonyly.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[width=\textwidth]{img/Baeyers_Probe_Alkenes_V.png}
+	\end{figure}
+	\vfill
+-}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Manganometrie}
+	\begin{itemize}
+		\item \textit{Manganometrie} je metoda redoxní odměrné analýzy.
+		\item Odměrným roztokem je manganistan draselný.
+		\item Titrace se provádí v kyselém prostředí.
+		\item \ce{MnO$_4^-$ + 8 H+ + 5 e- -> Mn^{2+} + 4 H2O}
+		\item Jako indikátor se využívají první kapky nezreagovaného manganistanu.
+		\item Manganometrií je možné stanovit koncentraci železa, dusitanů, peroxidů i organických analytů:
+		\item \ce{5 CH3OH + 6 MnO$_4^-$ + 18 H+ -> 5 CO2 + 6 Mn^{2+} + 19 H2O}
+		\item Standardizace se provádí na roztok kyseliny šťavelové nebo šťavelanu sodného.
+		\item \ce{2 KMnO4 + 6 HCl + 5 (COOH)2 -> 2 MnCl2 + 10 CO2 + 2 KCl + 8 H2O}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Technecium}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Jaderný izomer \ce{^{99m}Tc} se využívá v medicíně k zobrazování orgánů.
+		\item Radiofarmaka obsahující izotop \ce{^{99m}Tc} se využívají ke studiu mozku, srdce, jater ledvin a dalších orgánů.
+		\item Izomer \ce{^{95m}Tc} s poločasem rozpadu 61 dnů se používá ke studiu pohybu technecia v životním prostředí a v živočišných i rostlinných organismech.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[width=\textwidth]{img/99Tc_bone_scintigraphy_showed_bull’s_head_sign.jpg}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Rhenium}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Hlavní využití rhenia je ve slitinách odolných vůči vysokým teplotám. Část se také využívá v katalýze.\footnote[frame]{\href{https://doi.org/10.3103/S1067821207060089}{Rhythms of rhenium}}
+		\item Slitiny rhenia se využívají ve vysokoteplotních aplikacích, např. v~proudových motorech
+	\end{itemize}
+	\begin{figure}
+	\adjincludegraphics[height=0.4\textwidth]{img/Engine.f15.arp.750pix.jpg}
+\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Rhenium zvyšuje opracovatelnost wolframu za nízkých teplot.
+		\item Také zlepšuje stabilitu slitin za vysokých teplot.
+		\item Z toho důvodu se vyrábějí slitiny wolframu s rheniem až do koncentrace 27~\% rhenia, což je jeho maximální rozpustnost.
+		\item Slitina wolframu s rheniem se také využívá jako zdroj RTG záření.
+		\item Vyrábí se z ní vlákna používaná v MS spektrometrii a manometrech.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=0.4\textwidth]{img/Illustration_of_Crookes_X-ray_tube.png}
+	\end{figure}
+	\vfill
+}
+
+\section{Sloučeniny}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Mangan je poměrně reaktivní, na vzduchu se oxiduje, v jemném stavu je pyroforický.
+		\item Nejstabilnější oxidační číslo je II.
+		\item Sloučeniny \ce{Mn^{VII}} jsou silná oxidovadla.
+		\item Maximální koordinační číslo je 6.
+		\item Rozkládá vodu za vzniku vodíku.
+		\item Ve zředěných kyselinách se rozpouští za vzniku manganatých solí.
+		\item S nekovy reaguje až za vyšších teplot.
+		\item V kyslíku, dusíku, chloru a fluoru hoří:
+		\item \ce{3 Mn + 2 O2 -> Mn3O4}
+		\item \ce{3 Mn + N2 -> Mn3N2}
+		\item \ce{Mn + Cl2 -> MnCl2}
+		\item \ce{4 Mn + 5 F2 -> 2 MnF2 + 2 MnF3}
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Technecium i rhenium jsou méně reaktivní a jsou si chováním velmi podobné.
+		\item Vytvářejí sloučeniny v oxidačních číslech 0 až VII.
+		\item Sloučeniny v oxidačním čísle II jsou vzácné.
+		\item Sloučeniny \ce{M^{VII}} mají jen slabé oxidační vlastnosti.
+		\item Informací o chemii technecia není příliš, především kvůli jeho radioaktivitě.
+		\item Rhenium dosahuje ve sloučeninách až koordinačního čísla 9.
+		\item Zahříváním v kyslíku hoří na \ce{M2O7}.
+		\item Se sírou vzniká \ce{MS2}.
+		\item S fluorem vznikají směsi \ce{TcF5 + TcF6} a \ce{ReF6 + ReF7}.
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Oxidační číslo} & \textbf{Mn} & \textbf{Tc/Re} \\\hline
+		$-$III & \ce{[Mn(CO)(NO)3]} & \ce{[M(CO)4]^{3-}} \\\hline
+		$-$II & \ce{[Mn(ftalocyanin)]^{2-}} & - \\\hline
+		$-$I & \ce{[Mn(CO)5]^-} & \ce{[M(CO)5]^{-}} \\\hline
+		0 & \ce{[Mn2(CO)10]} & \ce{[M2(CO)10]} \\\hline
+		I & \ce{[Mn2(CO)10]} & \ce{[M2(CO)10]} \\\hline
+		II & \ce{[MnBr4]^{2-}} & \ce{[M2Cl2(diars)2]} \\\hline
+		III & \ce{[Mn(bipy)(NO3)3]} & \ce{[M(CN)7]^{4-}} \\\hline
+		IV & \ce{[MnF6]^{2-}} & \ce{[MI6]^{2-}} \\\hline
+		V & \ce{[MnO4]^{3-}} & \ce{[MOCl4]^{-}} \\\hline
+		VI & \ce{[MnO4]^{2-}} & \ce{[ReOCl4]} \\\hline
+		VII & \ce{[MnO4]^{-}} & \ce{[MO4]^{-}} \\\hline
+	\end{tabular}
+
+	* Ligand \ce{NO+} -- nitrosonium\\
+	* diars -- 1,2-Bis(dimethylarsino)benzene
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu VII}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav VII}
+	\begin{itemize}
+		\item Nejvýznamnější sloučeninou je manganistan draselný, \ce{KMnO4}.
+		\item Koncentrovaná kyselina sírová ho převádí na oxid:
+		\item \ce{2 KMnO4 + H2SO4 -> Mn2O7 + K2SO4 + H2O}
+		\item Oxid manganistý se i za nízkých teplot rozkládá na \ce{MnO2}, někdy i~explozivně:
+		\item \ce{2 Mn2O7 ->[$-10^\circ$C] 4 MnO2 + 3 O2}
+		\item Kyselinu manganistou, \ce{HMnO4}, lze získat odpařením roztoku (získaného pomocí iontoměničů) za nízké teploty.
+		\item Binární halogenidy nebyly dosud izolovány.
+		\item Reakcí manganistanu s halogenidem kyseliny sírové získáme oxid-halogenidy:
+		\item \ce{KMnO4 + 2 HSO3F -> MnO3F + KSO3F + H2SO4}
+		\item \ce{KMnO4 + 2 HSO3Cl -> MnO3Cl + KSO3Cl + H2SO4}
+		\item Obě tyto sloučeniny jsou silná oxidační činidla.
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Manganistan draselný}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/KMnO4.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/KMnO4-struct.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu VI}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav VI}
+	\begin{itemize}
+		\item Manganany jsou nestálé a v kyselém prostředí disproporcionují:
+		\item \ce{K2MnO4 + 4 HCl -> 2 KMnO4 + MnO2 + 4 KCl + 2 H2O}
+		\item Redukcí manganistanu pomocí \ce{SO2} získáme oxid-chlorid manganový, hnědou kapalinu, která ochotně hydrolyzuje.
+		\item Manganany lze připravit zahříváním burelu s hydroxidy alkalických kovů:
+		\item \ce{2 MnO2 + 4 KOH + O2 -> 2 K2MnO4 + 2 H2O}
+		\item Manganan lze oxidovat chlorem na manganistan:
+		\item \ce{2 K2MnO4 + Cl2 -> 2 KMnO4 + 2 KCl}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu V}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav V}
+	\begin{itemize}
+		\item Binární halogenidy nejsou známy.
+		\item Jediným známým oxid-halogenidem je \ce{MnOCl3}:\footnote[frame]{\href{https://doi.org/10.1016/0022-1902(68)80421-X}{New and unusual compounds of manganese: \ce{MnO3Cl}, \ce{MnO2Cl2} and \ce{MnOCl3} with remarks on \ce{Mn2O7}}}
+		\item \ce{KMnO4 + HSO3Cl -> MnOCl3 + KHSO4}
+		\item Je hydrolyticky nestabilní, ochotně hydrolyzuje na manganičnany.
+		\item Roztoky manganičnanů jsou stabilní jen v silně zásaditém prostředí, jinak dochází k disproporcionaci:
+		\item \ce{2 MnO$_4^{3-}$ + 2 H2O -> MnO$_4^{2-}$ + MnO2 + 4 OH-}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu IV}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav IV}
+	\begin{itemize}
+		\item Jediným známým halogenidem je \ce{MnF4}, vzniká přímou reakcí prvků.
+		\item Další možnou přípravou je reakce \ce{MnF2} s fluorem při ozařování UV zářením:\footnote[frame]{\href{https://doi.org/10.1016/S0022-1139(01)00566-8}{Room temperature syntheses of \ce{MnF3}, \ce{MnF4} and hexafluoromanganete(IV) salts of alkali cations}}
+		\item \ce{MnF2 + F2 ->[HF, UV, RT] MnF4}
+		\item Je to modrá, pevná látka, která se samovolně rozkládá:
+		\item \ce{2 MnF4 <=> 2 MnF3 + F2}
+		\item Oxid manganičitý, \ce{MnO2}, vytváří několik polymorfních forem. Zpravidla jsou nestechiometrické, pouze vysokoteplotní forma $\beta$-\ce{MnO2} je stechiometrická.
+		\item Má oxidační vlastnosti:
+		\item \ce{MnO2 + 4 HCl ->[T] MnCl2 + Cl2 + 2 H2O}
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Reakcí manganistanu s fluoridem v prostředí kyseliny fluorovodíkové získáme komplexní hexafluoromanganičitany:\footnote[frame]{\href{https://doi.org/10.1002/ange.19530651108}{Über eine neue Darstellung des Kalium‐hexafluoromanganats(IV)}}
+		\item \ce{2 KMnO4 + 2 KF + 10 HF + 3 H2O2 -> 2 K2MnF6 + 8 H2O + 3 O2}
+		\item Struktura je podobná sloučeninám typu \ce{AB2X6}, ionty \ce{K+} a \ce{F-} jsou uspořádány střídavě v kubické a hexagonální mřížce, ionty \ce{Mn^{VI}} jsou umístěny v oktaedrických dutinách a tvoří oktaedry \ce{[MnF6]^{2-}}.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=0.4\textwidth]{img/Alpha-MnF4.png}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu III}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav III}
+	\begin{itemize}
+		\item Jediným známým binárním halogenidem je fluorid, \ce{MnF3}, který snadno hydrolyzuje, ale termicky je stabilní.
+		\item Připravuje se oxidací manganatých solí fluorem:\footnote[frame]{\href{https://doi.org/10.1016/S0022-1139(01)00566-8}{Room temperature syntheses of \ce{MnF3}, \ce{MnF4} and hexafluoromanganete(IV) salts of alkali cations}}
+		\item \ce{2 MnF2 + F2 -> 2 MnF3}
+		\item S alkalickými halogenidy vytváří hexafluoromanganitany:
+		\item \ce{MnF3 + 3 NaF -> Na3MnF6}
+		\item Oktaedrický anion \ce{MnF6}, stejně jako další vysokospinové komplexy s~konfigurací d$^4$ je deformován vlivem Jahnova-Tellerova efektu.\footnote[frame]{\href{https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Modules_and_Websites_(Inorganic_Chemistry)/Coordination_Chemistry/Structure_and_Nomenclature_of_Coordination_Compounds/Coordination_Numbers_and_Geometry/Jahn-Teller_Distortions}{Jahn-Teller Distortions}}
+		\item Naproti tomu, komplex vznikající reakcí \ce{K3MnF6} s KCN je nízkospinový a anionty jsou pravidelné oktaedry:
+		\item \ce{K3MnF6 + 6 KCN -> K3[Mn(CN)6] + 6 KF}
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Oxid manganitý, \ce{Mn2O3}, je černá pevná látka, kterou lze připravit zahříváním \ce{MnO2} na teplotu nad 800~$^\circ$C.
+		\item Vzniká také v suchých článcích obsahujících burel:
+		\item \ce{2 MnO2 + Zn -> Mn2O3 + ZnO}
+		\item Reakcí nadbytku oxidu draselného s oxidem manganitým v zatavené niklové bombičce při teplotě 610~$^\circ$C lze za deset dní připravit červené krystaly dimanganitanu draselného (\ce{K6Mn2O6}).\footnote[frame]{\href{https://doi.org/10.1007/BF00597313}{Das erste Oxomanganat (III) mit Inselstruktur: \ce{K6[Mn2O6]}}}
+		\item Tmavěčervený komplexní anion \ce{[Mn(CN)6]^{3-}} můžeme připravit proháněním vzduchu vodným roztokem manganaté soli a kyanidu.
+		\item Manganatá sůl je oxidována vzdušným kyslíkem:
+		\item \ce{4 MnCl2 + O2 + 20 KCN + 4 HCN -> 4 K3[Mn(CN)6] + 2 H2O + 8 KCl}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu II}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav II}
+	\begin{itemize}
+		\item Manganaté soli jsou zpravidla růžové nebo bezbarvé.
+		\item Známe všechny halogenidy manganaté.
+		\item Chlorid a síran je možné připravit zahříváním burelu s příslušnou kyselinou:
+		\item \ce{2 MnO2 + 4 HCl -> 2 MnCl2 + O2 + 2 H2O}
+		\item Fluorid a bromid lze připravit reakcí uhličitanu manganatého s příslušnou kyselinou halogenovodíkovou.
+		\item \ce{MnCO3 + 2 HF -> MnF2 + CO2 + H2O}
+		\item Bezvodé lze získat termickou dehydratací.
+		\item Jodid se připravuje přímo z prvků.
+		\item Manganaté komplexy jsou zpravidla vysokospinové.
+		\item Nízkospinový je pouze kyano komplex \ce{K4[Mn(CN)6]}, který připravíme reakcí vodných roztoků uhličitanu a kyanidu draselného:
+		\item \ce{MnCO3 + KCN ->[H2O] K4[Mn(CN)6] + K2CO3}
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu I}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav I}
+	\begin{itemize}
+		\item Tento oxidační stav je běžnější u organokovových sloučenin s $\pi$-akceptorními ligandy, např. crownethery nebo pyrazoly.
+		\item Reakcí deoxygenovaného vodného roztoku NaCN s práškovým manganem získáme komplex \ce{Na5[Mn(CN)6]}.
+		\item Tuto sloučeninu lze připravit i redukcí \ce{Na4[Mn(CN)6]} sodným amalgámem.
+		\item Do této skupiny sloučenin patří i trikarbonyl(methylcyklopentadienyl)\\mangan.
+	\end{itemize}
+	\begin{figure}
+	\adjincludegraphics[height=0.35\textwidth]{img/Methylcyclopentadienyl-Manganese-Tricarbonyl_Skeletal.png}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu 0}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav 0}
+	\begin{itemize}
+		\item Dekakarbonyldimanganu, \ce{Mn2(CO)5}, je žlutá krystalická látka s teplotou tání 154~$^\circ$C.
+		\item Připravuje se redukcí trikarbonyl(methylcyklopentadienyl)manganu sodíkem v atmosféře \ce{N2} a \ce{CO}.\footnote[frame]{\href{https://doi.org/10.1016/0022-328X(68)80099-3}{A convenient synthesis of dimanganese decarbonyl from inexpensive starting materials at atmospheric pressure}}
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.6\textwidth]{img/Mn2(CO)10.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.6\textwidth]{img/Dimanganese-decacarbonyl.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\subsection{Sloučeniny manganu v oxidačním stavu $-$I}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav $-$I}
+	\begin{itemize}
+		\item Do této skupiny sloučenin patří jeden z nejstabilnějších hydridů první periody přechodných kovů.
+		\item Pentakarbonylhydridomangan, \ce{[HMn(CO)5]}, je bezbarvá kapalina.
+		\item Lze ho připravit reakcí dekakarbonyldimanganu s borohydridem:
+		\item \ce{2 LiHBEt3 + Mn2(CO)5 -> 2 Li[Mn(CO)5] + H2 + 2 Et3B}
+		\item \ce{Li[Mn(CO)5] + CF3SO3H -> HMn(CO)5 + Li+CF3SO$_3^-$}
+		\item p$K_a$ = 7.1 ve vodném prostředí.\footnote[frame]{\href{https://doi.org/10.1021/acs.chemrev.5b00695}{Brønsted–Lowry Acid Strength of Metal Hydride and Dihydrogen Complexes}}
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.5\textwidth]{img/HMn(CO)5-2D.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+		\begin{figure}
+			\adjincludegraphics[height=0.5\textwidth]{img/Pentacarbonylhydridomanganese.png}
+		\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\subsection{Sloučeniny TC a Re v oxidačním stavu VII--V}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stavu VII--V}
+	\begin{columns}
+	\begin{column}{.7\textwidth}
+	\begin{itemize}
+		\item Kovové rhenium poskytuje s fluorem buď \ce{ReF6} nebo \ce{ReF7}, v závislosti na podmínkách.
+		\item \ce{ReF7} je žlutá pevná látka, taje při 48~$^\circ$C.
+		\item Je to druhý stabilní heptafluorid, prvním je \ce{IF7}.
+		\item Má strukturu deformované pentagonální bipyramidy.\footnote[frame]{\href{https://doi.org/10.1126/science.263.5151.1265}{Crystal and Molecular Structures of Rhenium Heptafluoride}}
+		\item Vzniká při teplotě 400 $^\circ$C:
+		\item \ce{2 Re + 7 F2 ->[400 $^\circ$C] 2 ReF7}
+		\item S fluoridy vytváří komplexní anionty \ce{ReF$_8^-$}.
+		\item Reakcí s \ce{SbF5} poskytuje kation \ce{ReF$_6^+$}.
+		\item \ce{SbF5 + ReF7 -> [ReF6][SbF6]}
+	\end{itemize}
+	\end{column}
+	\begin{column}{.4\textwidth}
+	\begin{figure}
+		\adjincludegraphics[width=\textwidth]{img/ReF7.png}
+	\end{figure}
+	\end{column}
+	\end{columns}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stavu VII--V}
+	\begin{itemize}
+		\item \ce{ReF5} se připravuje rozkladem na wolframovém vlákně:
+		\item \ce{ReF6 ->[600 $^\circ$C] ReF5}
+		\item nebo reakcí s fluoridem fosforitým:\footnote[frame]{\href{https://doi.org/10.1071/CH9710243}{Reactivity of transition metal fluorides. VIII. Reactions of rhenium heptafluoride and hexafluoride}}
+		\item \ce{2 ReF6 + PF3 -> 2 ReF5 + PF5}
+		\item Přímá reakce Tc s fluorem vede k \ce{TcF6} a \ce{TcF5}.
+		\item \ce{TcF7} nebyl zatím připraven.
+		\item Reakce s chlorem a bromem vedou k halogenidům v oxidačním stupni VI a V. Chlorid rheničný je dimerní, \ce{Re2Cl10}.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=0.23\textwidth]{img/Re2Cl10.png}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Těkavé oxidy, \ce{M2O7}, vznikají spalováním kovů v kyslíku. Jsou anhydridy kyselin (obě jsou silné):
+		\item \ce{Tc2O7 + H2O -> 2 HTcO4}
+		\item Kyseliny \ce{HMO4} byly izolovány i v krystalickém stavu, jejich soli jsou isostrukturní s \ce{MnO$_4^-$}.
+		\item Jsou tvořeny tetraedry \ce{MO4} spojenými vrcholy.
+		\item Technecistany a rhenistany jsou běžnou výchozí látkou pro studium sloučenin těchto kovů.
+		\item Oxid rheniový lze připravit redukcí oxidem uhelnatý, oxid technciový nebyl zatím připraven:
+		\item \ce{Re2O7 + CO -> 2 ReO3 + CO2}
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[width=0.9\textwidth]{img/M2O7.png}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Sloučeniny TC a Re v oxidačním stavu IV}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{columns}
+	\begin{column}{.65\textwidth}
+		\textit{Oxidační stav IV}
+		\begin{itemize}
+		\item Modrý \ce{ReF4} můžeme připravit redukcí \ce{ReF5} vodíkem na platinové síťce.
+		\item \ce{ReCl4} se připravuje komproporcionací \ce{ReCl5} a \ce{Re3Cl9} za vyšší teploty.
+		\item \ce{TcCl4} lze připravit reakcí \ce{Tc2O7} s \ce{CCl4}.
+		\item Oxidy \ce{MO2} se připravují redukcí \ce{M2O7} pomocí čistého kovu nebo vodíku.
+		\item Známe všechny oktaedrické komplexy typu \ce{MX$^{2-}_6$}.
+	\end{itemize}
+	\end{column}
+	\begin{column}{.4\textwidth}
+	\begin{figure}
+		\adjincludegraphics[width=\textwidth]{img/Re3Cl9.png}
+		\caption*{Struktura \ce{Re3Cl9}}
+	\end{figure}
+	\end{column}
+	\end{columns}
+	\vfill
+}
+
+\subsection{Sloučeniny TC a Re v oxidačním stavu III}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav III}
+	\begin{itemize}
+		\item U sloučenin v oxidačním stavu III je běžná vazba kov-kov, halogenidy jsou trimerní.
+		\item Halogenidy ochotně vytvářejí adukty s lewisovými bazemi:
+		\item \ce{[Re3Cl9(py)3] <-[py] [Re3Cl9] ->[PR3] [Re3Cl9(PR3)]}
+		\item Anion \ce{Re2Cl$_8^{2-}$} byl první sloučeninou, u které byla prokázána \textit{čtverná vazba}.\footnote[frame]{\href{https://doi.org/10.1021/ic50025a015}{The Crystal and Molecular Structure of Dipotassium Octachlorodirhenate(III) Dihydrate, \ce{K2[Re2Cl8].2H2O}}}
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=.35\textheight,angle=90]{img/Octachlorodirhenate.png}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Sloučeniny TC a Re v oxidačním stavu I}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav I}
+	\begin{itemize}
+		\item Oxidační stav I je stabilizován $\pi$-akceptorními ligandy, např. CO.
+		\item Tyto sloučeniny \ce{^{99m}Tc} jsou zajímavé pro diagnostické snímkování, např. \ce{[Tc(H2O)3(CO)3]+}.
+		\item Oktaedrický kation \ce{[Tc(RNC)6]+} můžeme připravit redukcí technecistanu pomocí dithioničitanu \ce{S2O$_4^{2-}$} v přítomnosti izokyanidu RNC.
+	\end{itemize}
+	\begin{figure}
+		\adjincludegraphics[height=.4\textheight]{img/Tc-H2O-CO.png}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Sloučeniny Tc a Re v oxidačním stavu 0}
+\frame{
+	\frametitle{}
+	\vfill
+	\textit{Oxidační stav 0}
+	\begin{itemize}
+		\item Dekakarbonyldirhenia, \ce{Rh2(CO)5}, je bílá krystalická látka s teplotou tání 170~$^\circ$C.
+		\item Připravuje se redukcí rhenistanu draselného sodíkem v atmosféře  \ce{CO} za vysokého tlaku a teploty.\footnote[frame]{\href{https://doi.org/10.1016/S0022-328X(00)89806-X}{Molecular structure of dirhenium decacarbonyl}}
+	\end{itemize}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.6\textwidth]{img/Re2(CO)10improved.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.6\textwidth]{img/Rhenium-carbonyl-3D-balls.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\subsection{Organokovové sloučeniny}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item \textit{Methyl-trioxorhenium}
+		\begin{itemize}
+			\item \ce{MeReO3} -- těkavá, bezbarvá pevná látka. Využívá se jako katalyzátor.
+			\item Oxidační stav rhenia je +VII.
+			\item Lze jej připravit reakcí oxidu rhenistého s tetramethylcínem
+			\item \ce{Re2O7 + Me4Sn -> MeReO3 + Me3SnOReO3}.
+			\item Katalyzuje mnoho typů reakcí, např.:\footnote[frame]{\href{https://www.organic-chemistry.org/chemicals/oxidations/mto-methyltrioxorhenium.shtm}{Methyltrioxorhenium (MTO)}}
+			\begin{itemize}
+				\item Metateze olefinů
+				\item Oxidaci alkynů na kyseliny nebo diony
+				\item Oxidaci alkenů na epoxidy
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\begin{figure}
+	\adjincludegraphics[height=0.3\textwidth]{img/Methylrhenium-trioxide-3D-balls.png}
+	\end{figure}
+	\vfill
+}
+
+\input{../Last}
+
+\end{document}
