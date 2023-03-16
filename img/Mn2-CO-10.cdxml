@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CDXML SYSTEM "http://www.cambridgesoft.com/xml/cdxml.dtd" >
+<CDXML
+ CreationProgram="ChemDraw 22.2.0.3300"
+ Name="Mn2-CO-10.cdxml"
+ BoundingBox="6.30 82.21 514.89 323.35"
+ WindowPosition="0 0"
+ WindowSize="-2147483648 1073741824"
+ WindowIsZoomed="yes"
+ FractionalWidths="yes"
+ InterpretChemically="yes"
+ ShowAtomQuery="yes"
+ ShowAtomStereo="no"
+ ShowAtomEnhancedStereo="yes"
+ ShowAtomNumber="no"
+ ShowResidueID="no"
+ ShowBondQuery="yes"
+ ShowBondRxn="yes"
+ ShowBondStereo="no"
+ ShowTerminalCarbonLabels="no"
+ ShowNonTerminalCarbonLabels="no"
+ HideImplicitHydrogens="no"
+ LabelFont="3"
+ LabelSize="35.35"
+ LabelFace="96"
+ CaptionFont="20"
+ CaptionSize="42.45"
+ HashSpacing="9.56"
+ MarginWidth="7.08"
+ LineWidth="3.54"
+ BoldWidth="14.16"
+ BondLength="106.19"
+ BondSpacing="12"
+ ChainAngle="120"
+ LabelJustification="Auto"
+ CaptionJustification="Left"
+ AminoAcidTermini="HOH"
+ ShowSequenceTermini="yes"
+ ShowSequenceBonds="yes"
+ ShowSequenceUnlinkedBranches="no"
+ ResidueWrapCount="40"
+ ResidueBlockCount="10"
+ PrintMargins="36 36 36 36"
+ MacPrintInfo="0003000002580258000000001A781270FF88FF881AF012E80367057B03E00002000002580258000000001A781270000100000064000000010001010100020001270F000100010000000000000000000000000002001901900000000000600000000000000000000100000000000000000000000000000000"
+ ChemPropName=""
+ ChemPropFormula="Chemical Formula: "
+ ChemPropExactMass="Exact Mass: "
+ ChemPropMolWt="Molecular Weight: "
+ ChemPropMOverZ="m/z: "
+ ChemPropAnalysis="Elemental Analysis: "
+ ChemPropBoilingPt="Boiling Point: "
+ ChemPropMeltingPt="Melting Point: "
+ ChemPropCritTemp="Critical Temp: "
+ ChemPropCritPres="Critical Pres: "
+ ChemPropCritVol="Critical Vol: "
+ ChemPropGibbs="Gibbs Energy: "
+ ChemPropLogP="Log P: "
+ ChemPropMR="MR: "
+ ChemPropHenry="Henry&apos;s Law: "
+ ChemPropEForm="Heat of Form: "
+ ChemProptPSA="tPSA: "
+ ChemPropLogS="LogS: "
+ ChemPropPKa="pKa: "
+ ChemPropID=""
+ ChemPropFragmentLabel=""
+ color="0"
+ bgcolor="1"
+ RxnAutonumberStart="1"
+ RxnAutonumberConditions="no"
+ RxnAutonumberStyle="Roman"
+ RxnAutonumberFormat="(#)"
+><colortable>
+<color r="1" g="1" b="1"/>
+<color r="0" g="0" b="0"/>
+<color r="1" g="0" b="0"/>
+<color r="1" g="1" b="0"/>
+<color r="0" g="1" b="0"/>
+<color r="0" g="1" b="1"/>
+<color r="0" g="0" b="1"/>
+<color r="1" g="0" b="1"/>
+</colortable><fonttable>
+<font id="3" charset="iso-8859-1" name="Arial"/>
+<font id="20" charset="iso-8859-1" name="Times New Roman"/>
+</fonttable><page
+ id="422"
+ BoundingBox="0 0 523.20 769.92"
+ HeaderPosition="36"
+ FooterPosition="36"
+ PrintTrimMarks="yes"
+ HeightPages="1"
+ WidthPages="1"
+><group
+ id="406"
+ BoundingBox="6.30 82.21 514.89 323.35"
+ Z="76"
+><fragment
+ id="407"
+ BoundingBox="6.30 82.21 514.89 323.35"
+ Z="77"
+><n
+ id="202"
+ p="148.38 205.86"
+ Z="18"
+ Element="25"
+ NumHydrogens="0"
+ NeedsClean="yes"
+ AS="N"
+><t
+ p="148.38 219.79"
+ BoundingBox="123.79 190.33 172.96 219.79"
+ LabelJustification="Center"
+ Justification="Center"
+ LabelAlignment="Center"
+><s font="3" size="35.35" color="0" face="96">Mn</s></t></n><n
+ id="204"
+ p="99.06 98.27"
+ Z="19"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="423"
+><n
+ id="424"
+ p="99.06 98.27"
+ NumHydrogens="0"
+/><n
+ id="425"
+ p="54.84 1.77"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="426"
+ p="143.29 194.76"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="427"
+ B="424"
+ E="425"
+ Order="2"
+/><b
+ id="428"
+ B="426"
+ E="424"
+ Order="dative"
+/></fragment><t
+ p="111.84 112.19"
+ BoundingBox="58.75 82.21 111.84 112.64"
+ LabelJustification="Right"
+ Justification="Right"
+ LabelAlignment="Right"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="206"
+ p="188.28 107.46"
+ Z="21"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="430"
+><n
+ id="431"
+ p="188.28 107.46"
+ NumHydrogens="0"
+/><n
+ id="432"
+ p="228.16 9.08"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="433"
+ p="148.39 205.83"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="434"
+ B="431"
+ E="432"
+ Order="2"
+/><b
+ id="435"
+ B="433"
+ E="431"
+ Order="dative"
+/></fragment><t
+ p="175.50 121.38"
+ BoundingBox="175.50 91.40 228.59 121.83"
+ LabelJustification="Left"
+ LabelAlignment="Left"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="208"
+ p="188.28 304.26"
+ Z="23"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="437"
+><n
+ id="438"
+ p="188.28 304.26"
+ NumHydrogens="0"
+/><n
+ id="439"
+ p="228.16 402.64"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="440"
+ p="148.39 205.89"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="441"
+ B="438"
+ E="439"
+ Order="2"
+/><b
+ id="442"
+ B="440"
+ E="438"
+ Order="dative"
+/></fragment><t
+ p="175.50 318.19"
+ BoundingBox="175.50 288.21 228.59 318.64"
+ LabelJustification="Left"
+ LabelAlignment="Left"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="210"
+ p="99.06 308.97"
+ Z="25"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="444"
+><n
+ id="445"
+ p="99.06 308.97"
+ NumHydrogens="0"
+/><n
+ id="446"
+ p="53.26 404.73"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="447"
+ p="144.86 213.21"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="448"
+ B="445"
+ E="446"
+ Order="2"
+/><b
+ id="449"
+ B="447"
+ E="445"
+ Order="dative"
+/></fragment><t
+ p="111.84 322.90"
+ BoundingBox="58.75 292.91 111.84 323.35"
+ LabelJustification="Right"
+ Justification="Right"
+ LabelAlignment="Right"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="214"
+ p="46.61 205.86"
+ Z="29"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="451"
+><n
+ id="452"
+ p="46.61 205.86"
+ NumHydrogens="0"
+/><n
+ id="453"
+ p="-59.54 205.86"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="454"
+ p="152.76 205.86"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="455"
+ B="452"
+ E="453"
+ Order="2"
+/><b
+ id="456"
+ B="454"
+ E="452"
+ Order="dative"
+/></fragment><t
+ p="59.39 219.79"
+ BoundingBox="6.30 189.80 59.39 220.24"
+ LabelJustification="Right"
+ Justification="Right"
+ LabelAlignment="Right"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="408"
+ p="368.50 205.86"
+ Z="78"
+ Element="25"
+ NumHydrogens="0"
+ NeedsClean="yes"
+ AS="N"
+><t
+ p="368.50 219.79"
+ BoundingBox="343.92 190.33 393.09 219.79"
+ LabelJustification="Center"
+ Justification="Center"
+ LabelAlignment="Center"
+><s font="3" size="35.35" color="0" face="96">Mn</s></t></n><n
+ id="409"
+ p="250.14 205.86"
+ Z="79"
+ Warning="This unlabeled atom is connected to two identical colinear bonds, and may appear to be invisible."
+ AS="N"
+/><n
+ id="410"
+ p="295.67 128.59"
+ Z="81"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="458"
+><n
+ id="459"
+ p="295.67 128.59"
+ NumHydrogens="0"
+/><n
+ id="460"
+ p="222.86 51.34"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="461"
+ p="368.48 205.83"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="462"
+ B="459"
+ E="460"
+ Order="2"
+/><b
+ id="463"
+ B="461"
+ E="459"
+ Order="dative"
+/></fragment><t
+ p="308.45 142.51"
+ BoundingBox="255.36 112.53 308.45 142.96"
+ LabelJustification="Right"
+ Justification="Right"
+ LabelAlignment="Right"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="411"
+ p="474.58 210.59"
+ Z="83"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="465"
+><n
+ id="466"
+ p="474.58 210.59"
+ NumHydrogens="0"
+/><n
+ id="467"
+ p="580.63 215.32"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="468"
+ p="368.54 205.86"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="469"
+ B="466"
+ E="467"
+ Order="2"
+/><b
+ id="470"
+ B="468"
+ E="466"
+ Order="dative"
+/></fragment><t
+ p="461.80 224.51"
+ BoundingBox="461.80 194.53 514.89 224.96"
+ LabelJustification="Left"
+ LabelAlignment="Left"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="412"
+ p="441.69 293.65"
+ Z="85"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="472"
+><n
+ id="473"
+ p="441.69 293.65"
+ NumHydrogens="0"
+/><n
+ id="474"
+ p="509.66 375.19"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="475"
+ p="373.72 212.12"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="476"
+ B="473"
+ E="474"
+ Order="2"
+/><b
+ id="477"
+ B="475"
+ E="473"
+ Order="dative"
+/></fragment><t
+ p="428.91 307.58"
+ BoundingBox="428.91 277.59 482 308.03"
+ LabelJustification="Left"
+ LabelAlignment="Left"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="413"
+ p="410.90 113.35"
+ Z="87"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="479"
+><n
+ id="480"
+ p="410.90 113.35"
+ NumHydrogens="0"
+/><n
+ id="481"
+ p="455.13 16.85"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="482"
+ p="366.67 209.85"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="483"
+ B="480"
+ E="481"
+ Order="2"
+/><b
+ id="484"
+ B="482"
+ E="480"
+ Order="dative"
+/></fragment><t
+ p="398.12 127.27"
+ BoundingBox="398.12 97.35 425.65 158.16"
+ LabelJustification="Left"
+ LabelAlignment="Left"
+ LineStarts="1 2"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><n
+ id="414"
+ p="326.10 298.37"
+ Z="89"
+ NodeType="Fragment"
+ NeedsClean="yes"
+ AS="N"
+><fragment
+ id="486"
+><n
+ id="487"
+ p="326.10 298.37"
+ NumHydrogens="0"
+/><n
+ id="488"
+ p="281.87 394.87"
+ Element="8"
+ NumHydrogens="0"
+/><n
+ id="489"
+ p="370.33 201.87"
+ NodeType="ExternalConnectionPoint"
+/><b
+ id="490"
+ B="487"
+ E="488"
+ Order="2"
+/><b
+ id="491"
+ B="489"
+ E="487"
+ Order="dative"
+/></fragment><t
+ p="338.88 312.30"
+ BoundingBox="285.79 282.31 338.88 312.75"
+ LabelJustification="Right"
+ Justification="Right"
+ LabelAlignment="Right"
+><s font="3" size="35.35" color="0" face="96">CO</s></t></n><b
+ id="220"
+ Z="20"
+ B="202"
+ E="204"
+ BS="N"
+/><b
+ id="219"
+ Z="22"
+ B="202"
+ E="206"
+ Display="WedgedHashBegin"
+ BS="N"
+/><b
+ id="218"
+ Z="24"
+ B="202"
+ E="208"
+ BS="N"
+/><b
+ id="217"
+ Z="26"
+ B="202"
+ E="210"
+ Display="WedgeBegin"
+ BS="N"
+/><b
+ id="221"
+ Z="28"
+ B="202"
+ E="409"
+ BS="N"
+/><b
+ id="222"
+ Z="30"
+ B="202"
+ E="214"
+ BS="N"
+/><b
+ id="415"
+ Z="80"
+ B="408"
+ E="409"
+ BS="N"
+/><b
+ id="416"
+ Z="82"
+ B="408"
+ E="410"
+ Display="WedgeBegin"
+ BS="N"
+/><b
+ id="417"
+ Z="84"
+ B="408"
+ E="411"
+ BS="N"
+/><b
+ id="418"
+ Z="86"
+ B="408"
+ E="412"
+ Display="WedgedHashBegin"
+ BS="N"
+/><b
+ id="419"
+ Z="88"
+ B="408"
+ E="413"
+ Display="WedgedHashBegin"
+ BS="N"
+/><b
+ id="420"
+ Z="90"
+ B="408"
+ E="414"
+ Display="WedgeBegin"
+ BS="N"
+/></fragment></group></page></CDXML>
